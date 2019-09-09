@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 
 const App: React.FC = () => {
   return (
@@ -12,11 +12,10 @@ const App: React.FC = () => {
         </p>
         <a
           className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
+          href="#/lesson-list"
           rel="noopener noreferrer"
         >
-          Learn React
+          Learn Threejs
         </a>
       </header>
     </div>
