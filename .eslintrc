@@ -1,6 +1,0 @@
-{
-  "rules": {
-    "jsx-quotes": "warn",
-    "quotes": "warn"
-  }
-}
