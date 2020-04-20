@@ -4,6 +4,8 @@ import './lesson.list.scss';
 import lessons from './lessons';
 import { WEBGL } from 'three/examples/jsm/WebGL';
 
+import { courseIds } from '../video-course/routes';
+
 export default class LessonList extends React.Component {
 
   componentDidMount() {
@@ -15,10 +17,12 @@ export default class LessonList extends React.Component {
   }
 
   public render() {
+    const list = [...lessons, ...courseIds];
+
     return (
       <div className="lesson-list">
         {
-          lessons.map((lesson, index) => <Link className="lesson-link" to={`/${lesson}`} key={`lesson-${index + 1}`}>{lesson}</Link>)
+          list.map((lesson, index) => <Link className="lesson-link" to={`/${lesson}`} key={`lesson-${index + 1}`}>{lesson}</Link>)
         }
       </div>
     );
