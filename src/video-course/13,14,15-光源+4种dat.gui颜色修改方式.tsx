@@ -116,7 +116,7 @@ function createDatGUI(controlTarget: ControlTarget) {
   const directionalLight = { color: controlTarget.directionalLight.color.getHex() };
   directionalLightFolder.addColor(directionalLight, 'color')
     .onChange((color) => {
-      console.log(color); // 格式：16711680
+      console.log(color); // 格式：16711680/0xffffff
       controlTarget.directionalLight.color.setHex(color);
     });
   directionalLightFolder.add(controlTarget.directionalLight, 'intensity', 0, 1);

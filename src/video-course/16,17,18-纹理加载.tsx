@@ -20,7 +20,7 @@ export default class Course extends React.Component<any, any>{
 function createCanvasElement(): HTMLCanvasElement {
   const scene = new THREE.Scene();
 
-  getTexture(require('../assets/textures/1.jpg')).then((texture) => {
+  getTexture(require('../assets/textures/marble.jpg')).then((texture) => {
     texture.repeat.x = 2.5;
     texture.repeat.y = 3.5;
     texture.wrapS = THREE.RepeatWrapping;

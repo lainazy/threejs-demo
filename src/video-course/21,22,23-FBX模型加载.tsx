@@ -25,7 +25,7 @@ export default class Course extends React.Component<any, any>{
 function createCanvasElement(): HTMLCanvasElement {
   const scene = new THREE.Scene();
 
-  getModel(require('../assets/models/altair.fbx')).then((model) => {
+  loadModel(require('../assets/models/altair.fbx')).then((model) => {
     model.position.y = -window.innerHeight * 0.35;
 
     const light = new THREE.PointLight(0xffffff, 1, 2000, 1);
@@ -63,7 +63,7 @@ function createCanvasElement(): HTMLCanvasElement {
   return renderer.domElement;
 }
 
-function getModel(url: string) {
+function loadModel(url: string) {
   return new Promise((resolve: (group: THREE.Group) => void, reject) => {
     const fbxLoader = new FBXLoader();
     fbxLoader.load(url, resolve,
